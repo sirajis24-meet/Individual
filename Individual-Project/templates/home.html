@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<body>
+     <div class="top">
+  <a href="/home">Home</a>
+  <a href="/">Logout</a>
+  <a href="/add_games">Add Games</a>
+
+</div> 
+
+
+
+<div class = "container">
+    <h1 id = "Header">Highly Rated Games</h1>
+    <div class = "border">
+    <a href="/home/csgo"><img class = "games" src = "{{ url_for('static', filename='imgs/csgo.jpeg') }}"></a>
+    <a href="/home/celeste"> <img class = "games" src = "{{ url_for('static', filename='imgs/celeste.jpeg')}}"></a>
+    <a href="/home/eldenring"><img class = "games" src = "{{ url_for('static', filename='imgs/eldenring.webp')}}"></a>
+    <a href="/home/fallout"><img class = "games" src = "{{ url_for('static', filename='imgs/fallout.webp')}}"></a>
+    <a href="/home/mhwi"><img class = "games" src = "{{ url_for('static', filename='imgs/mhwi.webp') }}"></a>
+    <a href="/home/totk"><img class = "games" src = "{{ url_for('static', filename='imgs/totk.jpg') }}"></a>
+    <a href="/home/ds3"><img class = "games" src = "{{ url_for('static', filename='imgs/ds3.jpeg') }}"></a>
+    <a href="/home/ffxvi"><img class = "games" src = "{{ url_for('static', filename='imgs/ffxvi.jpg') }}"></a>
+    <a href="/home/terraria"><img class = "games" src = "{{ url_for('static', filename='imgs/terraria.jpeg') }}"></a>
+
+    {% for game in game_data %}
+        <a href="/home/{{game_data[game]['game_title']}}"><img class="games" src = "{{game_data[game]['img_url']}}"></a>
+    {% endfor %}
+
+</div>
+  </div>
+
+</body>
+</html> 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <title>Add Game</title>
+</head>
+<body>
+
+    <div class="top">
+      <a href="/home">Home</a>
+      <a href="/">Logout</a>
+      <a href="/add_games">Add Games</a>
+    </div> 
+
+<h1 id="Header">Add Your Favourite Games</h1>
+
+    <form action="/add_games" method="post">
+    
+        <label>Image URL:</label>
+        <input type="text" name="img_url" required><br>
+        <label>Game Title:</label>
+        <input type="text" name="game_title" required><br>
+        <input type="submit" value="Add Game">
+    </form>
+</body>
+</html>
